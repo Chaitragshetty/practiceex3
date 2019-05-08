@@ -7,6 +7,7 @@ public class ChessBoard {
         for (int i = 0; i < 8; i++) {
             System.out.println();
             for (int j = 0; j < 4; j++) {
+          //check for the even places nd print it
                 if(i%2==0) {
                     System.out.print("ww" + "|" + "bb" + "|");
                 }

@@ -1,3 +1,5 @@
+
+//adding two matrix
 package com.stackroute.PE3;
 import java.util.Scanner;
 
@@ -21,23 +23,27 @@ public class AddMatrix {
         int matrix1[][] = new int[row][col];
 
         System.out.println("enter first matrix elements");
+//entering first matrix element
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 matrix[i][j] = scan.nextInt();
             }
         }
+//entering second matrix elements
         System.out.println("enter the second matrix");
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 matrix1[i][j] = scan.nextInt();
             }
         }
+//add two matrix and store it in 3rd matrix
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 add[i][j] = matrix[i][j] + matrix1[i][j];
             }
 
         }
+
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 System.out.print(add[i][j]+"\t");

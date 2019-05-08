@@ -11,7 +11,7 @@ public class StringException {
                 System.out.println("ArrayIndexOutOfBounds");
             }
 
-
+//null pointer exception
             try {
                 String str = null;
                 System.out.println(str.length());
@@ -19,7 +19,7 @@ public class StringException {
                 System.out.println("NullPointerException..");
             }
 
-
+//negative array exception
             try {
                 int arrSize = -8;
                 int[] myArray = new int[arrSize];

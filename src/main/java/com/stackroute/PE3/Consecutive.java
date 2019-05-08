@@ -1,3 +1,4 @@
+//printing consecutive number
 package com.stackroute.pe3;
 
 import java.util.Scanner;
@@ -13,7 +14,7 @@ public class Consecutive{
        Scanner scan=new Scanner(System.in);
        System.out.println("Enter Series: ");
        String series=scan.nextLine();
-
+//splitting entered series using space
        String seriesdigit[]=series.split(" ");
        int length=seriesdigit.length;
        int arrayDigit[]=new int[length+1];
@@ -23,7 +24,7 @@ public class Consecutive{
        {
            arrayDigit[i]=Integer.parseInt(seriesdigit[i]);
        }
-
+//checking for the difference between the number
        for(int i=0;i<seriesdigit.length;i++)
        {
            int number=arrayDigit[i];
