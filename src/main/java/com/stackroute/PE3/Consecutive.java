@@ -1,35 +1,48 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+package com.stackroute.pe3;
 
-/* Name of the class has to be "Main" only if the class is public. */
-class Consecutive{
+import java.util.Scanner;
 
-public static void main(String[] args){
-    int[] a={1,2,3,7,9,24,25,26,78};
+public class Consecutive{
+   public static void main(String args[])
+   {
+       Consecutive.checkConsecutiveNumber();
+   }
 
-    for(int i=0;i<a.length;i++){
-        int count=0;
-        int first=0;
+   public static void checkConsecutiveNumber()
+   {
+       Scanner scan=new Scanner(System.in);
+       System.out.println("Enter Series: ");
+       String series=scan.nextLine();
 
-    /*  System.out.println(i);*/
-        first=a[i];
+       String seriesdigit[]=series.split(" ");
+       int length=seriesdigit.length;
+       int arrayDigit[]=new int[length+1];
+       int flag=0;
 
-        if(a[i+1]-a[i]==1){
+       for(int i=0;i<seriesdigit.length;i++)
+       {
+           arrayDigit[i]=Integer.parseInt(seriesdigit[i]);
+       }
 
-            count++;
+       for(int i=0;i<seriesdigit.length;i++)
+       {
+           int number=arrayDigit[i];
+           if(arrayDigit[i+1]==(number+1) || arrayDigit[i+1]==(number-1))
+           {
+               i++;
+               flag=1;
+           }
+           else {
+               break;
+           }
+       }
 
-            int last=a[i]+count;
-            i++;
-            System.out.println(first + " " + last);
-
-                }else{
-
-
-                System.out.println(a[i]);
-
-                }
-
-    }
-}
+       if(flag==1)
+       {
+           System.out.println(series+" are consecutive numbers");
+       }
+       else {
+           System.out.println(series+" are non consecutive numbers");
+       }
+   }
 }
